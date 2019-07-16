@@ -1,0 +1,8 @@
+# sum of all odd numbers between 1 to n.
+
+n=20
+t=0 
+for elem in range(1,n+1):
+    if (elem%2!=0):
+        t=t+elem
+print(t)
