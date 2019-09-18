@@ -1,0 +1,18 @@
+# Find the past / future dates from the given current date.
+
+from datetime import datetime
+import pandas as pd
+import numpy as np
+
+# past date ( 5 days back)
+
+current_date= pd.to_datetime('18-09-2019', format='%d-%m-%Y
+diff=pd.DateOffset(5)
+new_date=current_date - diff
+print("The new date is", new_date)
+
+# future date (10 days ahead)
+current_date= pd.to_datetime('18-09-2019', format='%d-%m-%Y')
+diff=pd.DateOffset(10)
+new_date=current_date - diff
+print("The new date is", new_date)
