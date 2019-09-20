@@ -1,0 +1,11 @@
+# convert the given series of string to date format
+
+import pandas as pd 
+import numpy as np
+from datetime import datetime
+
+dob= pd.Series(["07Sep59","01Jan55","15Dec47","11Jul42"])
+dob=dob.str[:-2] +'19'+dob.str[-2:]
+dob
+print(dob)
+pd.to_datetime(dob,format='%d%b%Y')
